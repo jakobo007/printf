@@ -2,6 +2,12 @@
 #define MAIN_H
 #include <stdarg.h>
 #include <string.h>
+typedef struct format
+{
+    char *id;
+    int (*f)();
+}match;
+
 int _printf(const char *format, ...);
 int char_print(va_list value);
 int _putchar(char c);
